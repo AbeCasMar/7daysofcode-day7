@@ -1,10 +1,12 @@
 var continuar = "si";
+var salir = "";
 var opcion = prompt(`¿Que operación deseas realizar?, presiona la tecla correspondiente:
     
     1-Sumar.
     2-Restar.
     3-Multiplicar.
     4-Dividir.
+    5-Salir.
     
     `);
 
@@ -66,24 +68,36 @@ while(continuar == "si"){
         case "4":
             dividir();
             break;
+        case "5":
+            salir = "si"
+            break
         default:
             alert("No se ingreso una opción valida");
             break;
     }
 
-    continuar = prompt("Deseas realizar otra operacion? escribe si o no para salir")
-    if(continuar == "si"){
+    if (salir == "si") {
+        
+        continuar = "no";
+        
+    } else {
 
-        opcion = prompt(`¿Que operación deseas realizar?, presiona la tecla correspondiente:
+        continuar = prompt("Deseas realizar otra operacion? escribe si o no para salir")
+        if(continuar == "si"){
+
+            opcion = prompt(`¿Que operación deseas realizar?, presiona la tecla correspondiente:
     
-            1-Sumar.
-            2-Restar.
-            3-Multiplicar.
-            4-Dividir.
+                1-Sumar.
+                2-Restar.
+                3-Multiplicar.
+                4-Dividir.
             
-            `);
+                `);
         
 
+        }
+        
     }
+    
     
 }
