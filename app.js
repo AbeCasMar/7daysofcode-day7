@@ -1,5 +1,6 @@
 var continuar = "si";
 var salir = "";
+var mensaje = "¡Hasta la proxima!";
 var opcion = prompt(`¿Que operación deseas realizar?, presiona la tecla correspondiente:
     
     1-Sumar.
@@ -101,3 +102,5 @@ while(continuar == "si"){
     
     
 }
+
+alert(mensaje);
